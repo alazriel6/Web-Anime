@@ -1,0 +1,82 @@
+/* ===== GENRE PAGE ===== */
+.genre-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 3;
+}
+
+.genre-page h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-align: center;
+}
+
+/* ===== GENRE LIST ===== */
+/* ===== GENRE LIST ===== */
+.genre-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* rapi jadi grid */
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.genre-item {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+  text-align: center; /* biar text selalu center */
+}
+
+
+/* tombol biar seluruh pill bisa diklik */
+.genre-item button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover & Focus */
+.genre-item:hover,
+.genre-item:focus-within {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #5f65d8, #a0a4ff);
+  outline: none;
+}
+
+/* Active (misal tombol dipilih) */
+.genre-item.active {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  color: #000;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .genre-page {
+    padding: 1rem;
+  }
+
+  .genre-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .genre-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
