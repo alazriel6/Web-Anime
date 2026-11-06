@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Routes, Route } from "react-router-dom";
 import Hero from "./components/common/hero.jsx";
 import "./App.css";
 import Navbar from "./components/common/navbar.jsx";
@@ -12,17 +9,15 @@ import Genre from "./components/main/genre.jsx";
 import TahunRilis from "./components/main/tahun-rilis.jsx";
 import AnimeList from "./components/main/animelist.jsx";
 import About from "./components/main/about.jsx";
+import AnimeInsertForm from "./components/AnimeInsertForm.jsx";
+import JacobAdmin from "./components/JacobAdmin.jsx";
+import AdminRoute from "./components/AdminRoute.jsx";
+import { AdminAuthProvider } from "./context/AdminAuthContext.jsx";
 
 function App() {
   return (
-    <>
-      <div className="bg bg1"></div>
-      <div className="bg bg2"></div>
-      <div className="bg bg3"></div>
-      <div className="bg bg4"></div>
-      <div className="bg bg5"></div>
-      <div className="bg bg6"></div>
-      <div className="bg bg7"></div>
+    <AdminAuthProvider>
+      <div className="bg"></div>
       <Hero />
       <Navbar />
       <Routes>
@@ -32,12 +27,22 @@ function App() {
         <Route path="/tahun-rilis" element={<TahunRilis />} />
         <Route path="/about" element={<About />} />
         <Route path="/search" element={<Content />} />
-
-        {/* ⬇️ ini route baru untuk detail anime */}
-        <Route path="/anime/:id" element={<Content />} /> {/* DETAIL ANIME */}
+        {/* Link Rahasia Masuk Admin Jacob */}
+        <Route path="/jacob" element={<JacobAdmin />} />
+        {/* Route Input Anime yang Diproteksi Khusus Admin */}
+        <Route
+          path="/anime-insert"
+          element={
+            <AdminRoute>
+              <AnimeInsertForm />
+            </AdminRoute>
+          }
+        />
+        {/* Detail anime */}
+        <Route path="/anime/:id" element={<Content />} />
       </Routes>
       <Footer />
-    </>
+    </AdminAuthProvider>
   );
 }
 

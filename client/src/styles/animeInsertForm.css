@@ -1,0 +1,229 @@
+/* ============================================
+   ANIME INSERT FORM STYLES
+   Matches Main Content layout (1200px container, flex: 3)
+   ============================================ */
+
+/* ===== INSERT PAGE WRAPPER ===== */
+.anime-insert-page {
+  flex: 3;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== CONTAINER STYLES ===== */
+.anime-insert-form {
+  width: 100%;
+  padding: 24px 28px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ===== FORM HEADER ===== */
+.anime-insert-form__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.anime-insert-form__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111;
+  margin: 0;
+}
+
+/* ===== FORM GRID LAYOUT ===== */
+.anime-insert-form__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 650px) {
+  .anime-insert-form__body {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ===== FORM FIELD STYLES ===== */
+.anime-insert-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.anime-insert-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.anime-insert-form__input,
+.anime-insert-form__textarea,
+.anime-insert-form__select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #222;
+  background-color: #fafafa;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Focus state */
+.anime-insert-form__input:focus,
+.anime-insert-form__textarea:focus,
+.anime-insert-form__select:focus {
+  background-color: #fff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== TEXTAREA STYLES ===== */
+.anime-insert-form__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ===== SELECT DROPDOWN STYLES ===== */
+.anime-insert-form__select {
+  cursor: pointer;
+}
+
+/* ===== BUTTON STYLES ===== */
+.anime-insert-form__button-group {
+  grid-column: span 2;
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 650px) {
+  .anime-insert-form__button-group {
+    grid-column: span 1;
+  }
+}
+
+.anime-insert-form__submit-btn {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 6px rgba(37, 99, 235, 0.25);
+}
+
+.anime-insert-form__submit-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.35);
+}
+
+.anime-insert-form__submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.anime-insert-form__cancel-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.anime-insert-form__cancel-btn:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* ===== GENRE TAGS ===== */
+.anime-insert-form__genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.anime-insert-form__genre-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #e2e8f0;
+  color: #334155;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.anime-insert-form__genre-tag:hover {
+  background-color: #cbd5e1;
+}
+
+.anime-insert-form__genre-tag--selected {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.25);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.anime-insert-form__full-width {
+  grid-column: span 2;
+}
+
+@media (max-width: 650px) {
+  .anime-insert-form__full-width {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .anime-insert-form {
+    padding: 16px 12px;
+  }
+
+  .anime-insert-form__header {
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+  }
+
+  .anime-insert-form__title {
+    font-size: 1.2rem;
+  }
+}

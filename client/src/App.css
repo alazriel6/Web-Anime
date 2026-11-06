@@ -10,70 +10,42 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url('./img/Wuwa1.png');
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  z-index: -1; /* supaya di belakang konten */
-  animation: fade 70s infinite;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
-html, body {
+
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* cegah geser horizontal */
+  overflow-x: hidden;
+  /* cegah geser horizontal */
 }
-
 
 .bg1 {
-  background-image: url('./img/Wuwa1.png');
-  animation: fadeLong 70s infinite;
-  animation-delay: 0s;
+  background-image: url('./img/Untitled-1.png');
 }
-
-.bg2 {
-  background-image: url('./img/Wuwa2.png');
-  animation: fade 70s infinite;
-  animation-delay: 20s; /* geser lebih jauh biar gak bentrok */
-}
-
-.bg3 { background-image: url('./img/Wuwa3.png'); animation-delay: 30s; }
-.bg4 { background-image: url('./img/Wuwa4.png'); animation-delay: 40s; }
-.bg5 { background-image: url('./img/Wuwa5.png'); animation-delay: 50s; }
-.bg6 { background-image: url('./img/Wuwa6.png'); animation-delay: 60s; }
-.bg7 { background-image: url('./img/Wuwa7.png'); animation-delay: 70s; }
-
-/* bg normal */
-@keyframes fade {
-  0%   { opacity: 0; }
-  5%   { opacity: 1; }
-  20%  { opacity: 1; }
-  25%  { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* bg1 lebih lama */
-@keyframes fadeLong {
-  0%   { opacity: 0; }
-  5%   { opacity: 1; }
-  35%  { opacity: 1; } /* tampil lama */
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
-}
-
 
 .container-main {
   max-width: 1200px;
-  margin: 2rem auto;          /* biar ketengah & kasih jarak dari navbar */
-  background: #fff;           /* putih supaya jelas */
+  margin: 2rem auto;
+  /* biar ketengah & kasih jarak dari navbar */
+  background: #fff;
+  /* putih supaya jelas */
   padding: 2rem;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -92,5 +64,3 @@ html, body {
 .read-the-docs {
   color: #888;
 }
-
-

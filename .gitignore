@@ -1,21 +1,32 @@
-# Node and local
+# Environment variables (Abaikan semua .env kecuali file contoh .env.example)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Node and dependencies
 node_modules/
 dist/
-/.env
-/*.env
+dist-ssr/
 
-# logs
-logs
+# Logs
+logs/
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# OS files
+# OS and Editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
 
-# Database dumps
+# Database dumps and temporary files
 *.sql
 webanime_dump.sql
-
-# IDE
-.vscode/
+drive-download-*/

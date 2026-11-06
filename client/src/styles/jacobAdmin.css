@@ -1,0 +1,248 @@
+/* ===== JACOB ADMIN PORTAL STYLES ===== */
+.jacob-portal-wrapper {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: rgba(18, 18, 24, 0.92);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.jacob-portal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.jacob-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #93c5fd;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+.jacob-portal-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0.25rem 0;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.jacob-portal-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.jacob-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.jacob-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.jacob-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.jacob-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.jacob-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  background: #111827;
+}
+
+.jacob-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+}
+
+.jacob-toggle-btn:hover {
+  color: #3b82f6;
+}
+
+.jacob-btn-primary {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  margin-top: 0.5rem;
+}
+
+.jacob-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+}
+
+.jacob-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.jacob-error-alert {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.jacob-footer-note {
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ===== LOGGED IN DASHBOARD ===== */
+.jacob-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.75rem;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.jacob-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jacob-user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.jacob-user-details h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.jacob-user-details span {
+  font-size: 0.85rem;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.jacob-btn-logout {
+  padding: 8px 16px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jacob-btn-logout:hover {
+  background: #dc2626;
+  color: #fff;
+  border-color: #dc2626;
+}
+
+.jacob-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.jacob-action-card {
+  padding: 1.25rem;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.jacob-action-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.jacob-action-card h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #93c5fd;
+}
+
+.jacob-action-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
